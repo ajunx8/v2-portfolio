@@ -13,10 +13,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <section>
+      <main className="bg-slate-100 px-10 md:px-20 lg:px-40">
+        {/* Nav and Banner */}
+        <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-xl font-burtons">developedbyed</h1>
+            <h1 className="text-xl font-burtons py-10">Adrian Greksa</h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
@@ -26,7 +27,7 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+                  className="bg-zinc-400 text-white px-4 py-2 rounded-md ml-8 shadow-slate-800 shadow-md hover:bg-amber-500"
                   href="#"
                 >
                   Resume
@@ -34,6 +35,25 @@ export default function Home() {
               </li>
             </ul>
           </nav>
+          <div className="flex flex-col space-y-3 text-center">
+            <p >
+              Hello everybody - I'm Adrian Greksa. I am a career changer into Software Engineering from machining in manufacturing. I'm also into in AI, Machine Learning, Space, Physics and Quantum Computing.
+            </p>
+            <p>
+              Currently studying algorithms, working with Next.js with TailwindCss.
+            </p>
+            <p>
+              Reading 'Fabric of the Cosmos' Brian Greene. 
+            </p>
+            <p>
+              As of February 2023, I'm searching for Job opportunities so please don't hesitate to contact me.
+            </p>
+          </div>
+        </section>
+
+        {/* Projects */}
+        <section>
+
         </section>
       </main>
     </>
