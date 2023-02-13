@@ -1,6 +1,12 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
 import { BsFillMoonStarsFill } from "react-icons/bs";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import Image from "next/image";
+import headIcon from "@/public/head_icon.png";
+import foodJournal from "@/public/foodJournal.png";
+import spaceExplore from "@/public/spaceExplore.png";
+import naughtsCrosses from "@/public/naughtsCrosses.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,11 +19,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-slate-100 px-10 md:px-20 lg:px-40">
+      <main className="bg-slate-100 px-10 md:px-20 lg:px-40 container mx-auto">
         {/* Nav and Banner */}
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-xl font-burtons py-10">Adrian Greksa</h1>
+            <div>
+              <Image src={headIcon} alt="" className="w-10" />
+            </div>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
@@ -27,7 +35,7 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  className="bg-zinc-400 text-white px-4 py-2 rounded-md ml-8 shadow-slate-800 shadow-md hover:bg-amber-500"
+                  className="bg-indigo-600 text-white px-4 py-2 rounded-md ml-8 shadow-slate-800 shadow-md hover:bg-amber-500"
                   href="#"
                 >
                   Resume
@@ -35,25 +43,81 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-          <div className="flex flex-col space-y-3 text-center">
-            <p >
-              Hello everybody - I'm Adrian Greksa. I am a career changer into Software Engineering from machining in manufacturing. I'm also into in AI, Machine Learning, Space, Physics and Quantum Computing.
-            </p>
-            <p>
-              Currently studying algorithms, working with Next.js with TailwindCss.
-            </p>
-            <p>
-              Reading 'Fabric of the Cosmos' Brian Greene. 
-            </p>
-            <p>
-              As of February 2023, I'm searching for Job opportunities so please don't hesitate to contact me.
-            </p>
+          <div className="flex flex-col text-center">
+            <h2 className="text-6xl py-3 text-indigo-700">Adrian Greksa</h2>
+            <h3 className="py-2">Software Engineer</h3>
+            <div className="space-y-3 py-10">
+              <p className="leading-loose text-lg">
+                I am an enthusiatic
+                computer science student that changed from being a machinist in
+                manufacturing. I'm also into in AI, Machine Learning, Space,
+                Physics and Quantum Computing.
+              </p>
+            </div>
+          </div>
+          <div className="text-3xl flex justify-center gap-16 py-3">
+            <AiFillLinkedin />
+            <AiFillGithub />
           </div>
         </section>
 
         {/* Projects */}
         <section>
+          <div className="my-10 text-left">
+            <h1 className="text-4xl">Projects</h1>
+            <p>I've worked on a variety of projects both individually and in collaboration with developers and UX designers.</p>
+          </div>
 
+          <div className="flex justify-center flex-col gap-10 md:flex-row">
+            <div className="text-center shadow-lg p-5 rounded-xl my-5">
+              <h2 className="text-xl my-2">The Food Journal</h2>
+              <div>
+                <Image src={foodJournal} alt="" className="w-full" />
+              </div>
+              <p>Ruby on rails full-stack application, with postgresQL database</p>
+            </div>
+
+            <div className="text-center shadow-lg p-5 rounded-xl my-5">
+              <h2 className="text-xl my-2">Survival Space Exploration</h2>
+              <div>
+                <Image src={spaceExplore} alt="" className="w-full" />
+              </div>
+              <p>CRUD game made with Ruby on rails, with postgresQL database</p>
+            </div>
+
+            <div className="text-center shadow-lg p-5 rounded-xl my-5">
+              <h2 className="text-xl my-2">Naughts and Crosses</h2>
+              <div>
+                <Image src={naughtsCrosses} alt="" className="w-full" />
+              </div>
+              <p>Description</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Skills */}
+        <section>
+          <div>
+            <h2>Languages</h2>
+          </div>
+        </section>
+
+        {/* Current Interests */}
+        <section>
+          <h2 className="text-5xl text-center my-5">
+            Now?
+          </h2>
+          <div className="flex flex-col justify-center gap-2 text-center">
+            <p>
+              Currently studying algorithms, working with Next.js with
+              TailwindCss.
+            </p>
+            <p>Reading 'Fabric of the Cosmos' Brian Greene.</p>
+            <p>
+              As of February 2023, I'm searching for Job opportunities so please
+              reach out to me!
+            </p>
+          </div>
         </section>
       </main>
     </>
