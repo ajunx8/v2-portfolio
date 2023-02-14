@@ -45,12 +45,12 @@ export default function Home() {
           </nav>
           <div className="flex flex-col text-center">
             <h2 className="text-6xl py-3 text-indigo-700">Adrian Greksa</h2>
-            <h3 className="py-2">Software Engineer</h3>
+            <h3 className="text-left w-60 mx-auto -translate-x-14">Software Engineer</h3>
             <div className="space-y-3 py-10">
               <p className="leading-loose text-lg">
                 I am an enthusiatic
                 computer science student that changed from being a machinist in
-                manufacturing. I'm also into in AI, Machine Learning, Space,
+                manufacturing. I also like AI, Machine Learning, Space,
                 Physics and Quantum Computing.
               </p>
             </div>
@@ -64,7 +64,7 @@ export default function Home() {
         {/* Projects */}
         <section>
           <div className="my-10 text-left">
-            <h1 className="text-4xl">Projects</h1>
+            <h1 className="text-4xl my-4">Projects</h1>
             <p>I've worked on a variety of projects both individually and in collaboration with developers and UX designers.</p>
           </div>
 
@@ -90,7 +90,7 @@ export default function Home() {
               <div>
                 <Image src={naughtsCrosses} alt="" className="w-full" />
               </div>
-              <p>Description</p>
+              <p>Static HTML and CSS</p>
             </div>
           </div>
         </section>
@@ -98,7 +98,7 @@ export default function Home() {
         {/* Skills */}
         <section>
           <div>
-            <h2>Languages</h2>
+            <h2 className="text-4xl flex justify-center my-5">Languages</h2>
           </div>
         </section>
 
