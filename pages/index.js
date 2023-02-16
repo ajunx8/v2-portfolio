@@ -22,7 +22,7 @@ export default function Home() {
       <main className="relative max-w-screen-lg mx-auto px-10 z-10 w-full bg-slate-100 shadow-2xl">
         {/* Nav and Banner */}
         <section className="min-h-screen">
-          <nav className="relative flex items-center justify-between w-full max-w-screen-lg p-5 mx-auto lg:px-2 lg:shadow-none">
+          <nav className="relative flex items-center justify-between w-full max-w-screen-lg p-5 mx-auto lg:px-2 lg:shadow-none bg-white rounded-b-3xl">
             <div>
               <Image src={headIcon} alt="" className="w-10" />
             </div>
@@ -45,7 +45,7 @@ export default function Home() {
           </nav>
           <div className="flex flex-col text-center">
             <h2 className="text-6xl py-3 text-indigo-700">Adrian Greksa</h2>
-            <h3 className="text-left w-60 mx-auto -translate-x-14">Software Engineer</h3>
+            <h3 className="text-left w-60 mx-auto sm:-translate-x-14">Software Engineer</h3>
             <div className="space-y-3 py-10">
               <p className="leading-loose text-lg">
                 I am an enthusiatic
