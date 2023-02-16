@@ -20,38 +20,41 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="relative max-w-screen-lg mx-auto px-10 z-10 w-full bg-slate-100 shadow-2xl">
-        {/* Nav and Banner */}
+        {/* Nav */}
+        <nav className="sticky top-0 flex items-center justify-between w-full max-w-screen-lg p-5 mx-auto lg:px-2 lg:shadow-none bg-white rounded-b-3xl">
+          <div>
+            <Image src={headIcon} alt="" className="w-10" />
+          </div>
+          <ul className="flex items-center">
+            <li>
+              <BsFillMoonStarsFill
+                onClick={() => setDarkMode(!darkMode)}
+                className="cursor-pointer text-2xl"
+              />
+            </li>
+            <li>
+              <a
+                className="bg-indigo-600 text-white px-4 py-2 rounded-md ml-8 shadow-slate-800 shadow-md hover:bg-amber-500"
+                href="#"
+              >
+                Resume
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        {/* About */}
         <section className="min-h-screen">
-          <nav className="relative flex items-center justify-between w-full max-w-screen-lg p-5 mx-auto lg:px-2 lg:shadow-none bg-white rounded-b-3xl">
-            <div>
-              <Image src={headIcon} alt="" className="w-10" />
-            </div>
-            <ul className="flex items-center">
-              <li>
-                <BsFillMoonStarsFill
-                  onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-2xl"
-                />
-              </li>
-              <li>
-                <a
-                  className="bg-indigo-600 text-white px-4 py-2 rounded-md ml-8 shadow-slate-800 shadow-md hover:bg-amber-500"
-                  href="#"
-                >
-                  Resume
-                </a>
-              </li>
-            </ul>
-          </nav>
           <div className="flex flex-col text-center">
             <h2 className="text-6xl py-3 text-indigo-700">Adrian Greksa</h2>
-            <h3 className="text-left w-60 mx-auto sm:-translate-x-14">Software Engineer</h3>
+            <h3 className="text-left w-60 mx-auto -z-10 sm:-translate-x-14">
+              Software Engineer
+            </h3>
             <div className="space-y-3 py-10">
               <p className="leading-loose text-lg">
-                I am an enthusiatic
-                computer science student that changed from being a machinist in
-                manufacturing. I also like AI, Machine Learning, Space,
-                Physics and Quantum Computing.
+                I am an enthusiatic computer science student that changed from
+                being a machinist in manufacturing. I also like AI, Machine
+                Learning, Space, Physics and Quantum Computing.
               </p>
             </div>
           </div>
@@ -65,7 +68,10 @@ export default function Home() {
         <section>
           <div className="my-10 text-left">
             <h1 className="text-4xl my-4">Projects</h1>
-            <p>I've worked on a variety of projects both individually and in collaboration with developers and UX designers.</p>
+            <p>
+              I've worked on a variety of projects both individually and in
+              collaboration with developers and UX designers.
+            </p>
           </div>
 
           <div className="flex justify-center flex-col gap-10 md:flex-row">
@@ -74,7 +80,9 @@ export default function Home() {
               <div>
                 <Image src={foodJournal} alt="" className="w-full" />
               </div>
-              <p>Ruby on rails full-stack application, with postgresQL database</p>
+              <p>
+                Ruby on rails full-stack application, with postgresQL database
+              </p>
             </div>
 
             <div className="text-center shadow-lg p-5 rounded-xl my-5">
@@ -104,9 +112,7 @@ export default function Home() {
 
         {/* Current Interests */}
         <section>
-          <h2 className="text-5xl text-center my-5">
-            Now?
-          </h2>
+          <h2 className="text-5xl text-center my-5">Now?</h2>
           <div className="flex flex-col justify-center gap-2 text-center">
             <p>
               Currently studying algorithms, working with Next.js with
