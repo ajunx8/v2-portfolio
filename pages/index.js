@@ -19,10 +19,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-slate-100 px-10 md:px-20 lg:px-40 container mx-auto">
+      <main className="relative max-w-screen-lg mx-auto px-10 z-10 w-full bg-slate-100 shadow-2xl">
         {/* Nav and Banner */}
         <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between">
+          <nav className="relative flex items-center justify-between w-full max-w-screen-lg p-5 mx-auto lg:px-2 lg:shadow-none">
             <div>
               <Image src={headIcon} alt="" className="w-10" />
             </div>
