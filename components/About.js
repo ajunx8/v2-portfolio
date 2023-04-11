@@ -14,6 +14,12 @@ export default function About() {
                 <AiFillLinkedin />
                 <AiFillGithub />
             </div>
+            <div>
+                <p>Interesting Ideas to add to my portfolio - chatGPT AMA trained on information about me.</p>
+                <p>weather forecasting bar section</p>
+                <p>little things i've made</p>
+                <p>Leetcode questions</p>
+            </div>
         </section>
     );
 }

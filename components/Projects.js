@@ -1,7 +1,5 @@
 import Image from "next/image";
-import foodJournal from "@/public/foodJournal.png";
-import spaceExplore from "@/public/spaceExplore.png";
-import naughtsCrosses from "@/public/naughtsCrosses.png";
+import { projectsInfo } from "@/lib/projectsInfo";
 
 export default function Projects() {
     return (
@@ -12,29 +10,13 @@ export default function Projects() {
             </div>
 
             <div className="flex justify-center flex-col gap-10 md:flex-row">
-                <div className="text-center shadow-lg p-5 rounded-xl my-5">
-                    <h2 className="text-xl my-2">The Food Journal</h2>
-                    <div>
-                        <Image src={foodJournal} alt="" className="w-full rounded-xl" />
+                {projectsInfo.map((project, id) => (
+                    <div key={id} className="basis-1/3 text-center shadow-lg p-5 rounded-xl my-5">
+                        <h2 className="text-xl my-2">{project.title}</h2>
+                        <Image src={project.image} alt="" className="rounded-xl h-auto" />
+                        <p>{project.description}</p>
                     </div>
-                    <p>Ruby on rails full-stack application, with postgresQL database</p>
-                </div>
-
-                <div className="text-center shadow-lg p-5 rounded-xl my-5">
-                    <h2 className="text-xl my-2">Survival Space Exploration</h2>
-                    <div>
-                        <Image src={spaceExplore} alt="" className="w-full rounded-xl" />
-                    </div>
-                    <p>CRUD game made with Ruby on rails, with postgresQL database</p>
-                </div>
-
-                <div className="text-center shadow-lg p-5 rounded-xl my-5">
-                    <h2 className="text-xl my-2">Naughts and Crosses</h2>
-                    <div>
-                        <Image src={naughtsCrosses} alt="" className="w-full rounded-xl" />
-                    </div>
-                    <p>Static HTML and CSS</p>
-                </div>
+                ))}
             </div>
         </section>
     );
